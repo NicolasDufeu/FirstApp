@@ -1,0 +1,103 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>
+            Page Home
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+    <div id="container">
+
+        <p>
+            <a routerLink="/details">Voir la pages Détails</a>
+        </p>
+        <p>
+            <ion-button routerLink="/details">Voir la pages des Détails</ion-button>
+            <ion-button routerLink="/gallery">Voir la pages des Gallery</ion-button>
+        </p>
+        <p>
+            <ion-button expand="block" (click)="openDetails()">Accéder à la pages Détails programmatiquement</ion-button>
+        </p>
+
+        <strong>Ok pour créer une App</strong>
+
+        <ion-text color="primary">
+            <h1>{{ titre }}</h1>
+            <h1>Mon Titre de niveau 1 primary</h1>
+        </ion-text>
+        <ion-text color="secondary">
+            <h2>Mon Titre de niveau 2 secondary</h2>
+        </ion-text>
+        <ion-text color="light">
+            <h3>Mon Titre de niveau 3 light</h3>
+        </ion-text>
+        <ion-text color="danger">
+            <h4>Mon Titre de niveau 4 danger</h4>
+        </ion-text>
+        <ion-text color="dark">
+            <h5>Mon Titre de niveau 5 dark</h5>
+        </ion-text>
+
+        <p>
+            Lorem <ion-text color="danger">ipsum dolor sit amet,</ion-text> consectetur adipiscing elit. Maecenas molestie vestibulum dui ut facilisis. Suspendisse et ullamcorper justo. Donec mattis eros at libero maximus, eget semper ipsum efficitur. Duis metus quam, porttitor non orci quis, varius gravida nulla. In vehicula arcu vitae dolor sodales, vitae facilisis tortor viverra. Etiam sed felis ut libero fermentum consectetur. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas varius turpis non lectus ultricies, at sollicitudin quam accumsan.
+        </p>
+
+        <ion-button (click)="showAlert('coucou')">Je suis un bouton</ion-button><br>
+
+        <ion-button target="_blank" href="https://google.fr">Lien Google</ion-button>
+
+        <p>
+            <ion-button color="danger">Bouton rouge</ion-button>
+        </p>
+        <p>
+            <ion-button color="tertiary" shape="round">Bouton round</ion-button>
+        </p>
+
+
+    </div>
+
+    <p>
+        <ion-button color="secondary" expand="full">Bouton full</ion-button>
+    </p>
+    <p>
+        <ion-button color="secondary" expand="block">Bouton block</ion-button>
+    </p>
+    <p>
+        <ion-button color="danger" fill="outline">Bouton outline</ion-button>
+    </p>
+    <p>
+        <ion-button color="danger" fill="clear">Bouton clear</ion-button>
+    </p>
+    <p>
+        <ion-button color="danger" fill="solid">Bouton solid</ion-button>
+    </p>
+    <p>
+        <ion-button color="primary" size="large">Bouton large</ion-button>
+    </p>
+    <p>
+        <ion-button color="dark" size="small">Bouton small</ion-button>
+    </p>
+
+    <p>
+        <ion-button color="primary" size="small">
+            <ion-icon slot="start" name="home"></ion-icon>
+            Bouton icône home
+        </ion-button>
+    </p>
+    <p>
+        <ion-button color="primary" size="small">
+            <ion-icon slot="end" name="alarm"></ion-icon>
+            Bouton icône alarm
+        </ion-button>
+    </p>
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar>
+        <ion-title>
+            Footer
+        </ion-title>
+    </ion-toolbar>
+</ion-footer>

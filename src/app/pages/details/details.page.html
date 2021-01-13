@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Details</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+   <ion-button routerLink="/gallery">Voir la pages des Gallery</ion-button>
+    <h1>{{ titre }}</h1>
+    <h2>{{ methodeSoustitre() }}</h2>
+    <ion-item>
+        <ion-label>Mon champs texte</ion-label>
+        <ion-input [(ngModel)]="maVariable" type="text" placeholder="Mon champs texte"></ion-input>
+    </ion-item>
+    <ion-button (click)="ajoutVar()" expand="block">Afficher la variable</ion-button>
+    <ion-list>
+        <ion-item *ngFor="let item of monTableau; let i = index">
+            {{ i }}
+            {{ item }}
+            <ion-button slot="end" color="danger" (click)="supprIndex(i)">
+                Supprimer
+            </ion-button>
+        </ion-item>
+    </ion-list>
+</ion-content>
